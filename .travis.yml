@@ -25,6 +25,12 @@ git:
   depth: 1
 
 before_install:
+  - wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Linux-x86_64.tar.gz
+  - tar xf cmake-3.17.3-Linux-x86_64.tar.gz
+  - cd cmake-3.17.3-Linux-x86_64
+  - ./configure
+  - make
+  - sudo make install
   - sudo apt install mariadb-server mariadb-client libace-dev -y
   - if [[ $TRAVIS_PULL_REQUEST == 'true' ]]; then exit; fi
 ##  - curl -o doxygen.tar.gz https://oregon-core.net/travis/doxygen.tar.gz
