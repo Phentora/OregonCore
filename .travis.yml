@@ -1,4 +1,4 @@
-dist: bionic
+dist: focal
 language: cpp
 compiler:
   - clang
@@ -25,8 +25,6 @@ git:
   depth: 1
 
 before_install:
-  - curl -sSL https://github.com/Kitware/CMake/releases/tag/v3.16.7 -o cmake.tar.gz
-  - sudo tar xf cmake.tar.gz --strip 1 -C /usr/local;
   - sudo apt install mariadb-server mariadb-client libace-dev -y
   - if [[ $TRAVIS_PULL_REQUEST == 'true' ]]; then exit; fi
 ##  - curl -o doxygen.tar.gz https://oregon-core.net/travis/doxygen.tar.gz
