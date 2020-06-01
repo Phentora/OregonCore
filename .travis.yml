@@ -41,6 +41,7 @@ install:
 
 # apply all updates to db and catch possible errors
 script:
+  - curl -sSL https://github.com/Kitware/CMake/releases/tag/v3.16.7 -o cmake.tar.gz;
   - cd $TRAVIS_BUILD_DIR/sql
   - mysql -u root --password='' < create/create_mysql.sql
   - mysql -u oregon -poregon realmd < base/realmd.sql
