@@ -13,10 +13,10 @@
 project(OregonCore)
 
 # We require CMake >= 2.8
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.16)
 
 # CMake policies (can not be handled elsewhere)
-cmake_policy(VERSION 2.8)
+cmake_policy(VERSION 3.4)
  
 if(POLICY CMP0043)
   cmake_policy(SET CMP0043 OLD)
