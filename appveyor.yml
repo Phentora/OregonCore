@@ -17,7 +17,7 @@ version: 0.0.{build}-{branch}
 #---------------------------------#
 
 # Build worker image (VM template)
-image: Visual Studio 2015
+image: Visual Studio 2019
 
 # scripts that are called at very beginning, before repo cloning
 init:
@@ -56,7 +56,7 @@ build:
 before_build:
     - mkdir build
     - cd build
-    - cmake .. -G "Visual Studio 14 2015 Win64"
+    - cmake .. -G "Visual Studio 14 2019 Win64"
         -DSERVERS=1
         -DSCRIPTS=1
         -DTOOLS=1
