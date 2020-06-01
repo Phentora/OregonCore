@@ -56,7 +56,7 @@ build:
 before_build:
     - mkdir build
     - cd build
-    - cmake .. -G "Visual Studio 16 2019 Win64"
+    - cmake .. -G "Visual Studio 16 2019 x64"
         -DSERVERS=1
         -DSCRIPTS=1
         -DTOOLS=1
